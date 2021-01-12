@@ -1,0 +1,6 @@
+
+{% for standard in standards %}
+
+    <a href="{% url 'courses:subject_list' slug=standard.slug  %}"> {{ standard.name }} </a><br>
+
+{% endfor %}

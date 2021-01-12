@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>HomePage</title>
+</head>
+<body>
+<h1>Welcome to LMS system : {{ user.username }}</h1>
+
+<a href="{% url 'register' %}" > Register </a>
+<a href="{% url 'home' %}" > Home </a>
+<a href="{% url 'login' %}" > Login </a>
+
+{% if user.is_authenticated %}
+    <a href="{% url 'logout' %}" ><h4>Logout: {{user.username}}</h4></a>
+{% endif %}
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+
+{% if registered %}
+   <h3>Thank you for registration </h3>
+
+{% else %}
+    <h3>Fill this form to register </h3>
+    <form method="POST"  enctype="multipart/form-data">
+
+        {% csrf_token %}
+        {{ signup_form }}
+        {{ profile_form }}
+
+        <input type="submit" value="register">
+
+    </form>
+
+{% endif %}
