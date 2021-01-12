@@ -3,4 +3,7 @@
 
     <a href="{% url 'courses:lesson_detail' slug=lesson.slug subject=subjects.slug standard=lesson.standard.slug %}" >{{ lesson.position }}:-{{ lesson.name }} </a><br>
 
+
 {% endfor %}
+
+<a href="{% url 'courses:lesson_create' standard=subjects.standard.slug subject=subjects.slug %}">Create New Lesson </a>
